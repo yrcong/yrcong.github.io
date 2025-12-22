@@ -75,8 +75,13 @@
     .rule{height:1px; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 40%, transparent), transparent); border:none}
     /* Publication media list */
     .pubs{list-style:none; padding-left:0; display:flex; flex-direction:column; gap:14px}
-    .pub-item{display:grid; grid-template-columns:120px 1fr; gap:14px; align-items:start; border:1px solid var(--line); border-radius:10px; padding:10px; background:var(--panel)}
-    .pub-thumb{width:120px; height:80px; object-fit:cover; border-radius:8px; border:1px solid var(--line); background:#fff}
+    .pub-item{display:grid; grid-template-columns:240px 1fr; gap:14px; align-items:start; border:1px solid var(--line); border-radius:10px; padding:10px; background:var(--panel)}
+    .pub-thumb{
+      width:240px;
+      aspect-ratio: 3 / 2;
+      object-fit: contain;
+      background:#fff;
+    }
     .pub-meta{font-size:14px; color:var(--muted)}
     .pub-links{margin-top:6px}
     .pub-links a{margin-right:10px}
@@ -101,29 +106,31 @@
       <aside class="side">
         <img class="photo" alt="Profile photo of Your Name" src="images/profile.jpg" />
         <h1 class="name" id="site-title">Yuren Cong (丛裕人)</h1>
-        <p class="roles">AI Research Scientist<br/>Meta BizAI</p>
+        <p class="roles">AI Research Scientist, Meta<br/>congyuren[at]hotmail.com</p>
         <div class="links" aria-label="Profiles">
           <a href="https://scholar.google.co.uk/citations?user=6DPcOUEAAAAJ&hl=en&oi=ao">Google Scholar</a>
           <a href="https://github.com/yrcong">GitHub</a>
           <a href="https://www.linkedin.com/in/yuren-cong-78626a193/">LinkedIn</a>
+          <a href="https://x.com/CongYuren">Twitter</a>
         </div>
       </aside>
 
       <main id="main">
         <section id="about">
           <h2>About</h2>
-          <p class="lead">A computer vision researcher interested in both long-term research and short-term biz-landing.</p>
+          <p class="lead">Research Scientist, Meta AI</p>
           <p>
-            <b>Now</b>: I am focused on human-centric image and video generation technologies at <a href="https://www.facebook.com/business/ai/business-ai">Meta BizAI</a>. Meanwhile, I am building foundation models capable of understanding and generating across diverse modalities.
+            <b>Hello</b>! I am a research scientist at Meta, building multi-modal understanding and generation models.
           </p>
           <p>
-            <b>Previously</b>: I received my Ph.D. in Computer Science from Leibniz Hanover University, advised by <a href="https://sites.google.com/site/michaelyingyang">Prof. Michael Yang</a> and <a href="https://www.tnt.uni-hannover.de/en/staff/rosenhahn/">Prof. Bodo Rosenhahn</a>. I was a senior ML scientist at <a href="https://picsart.com/">Picsart</a>, a research intern at <a href="https://meta.com/">Meta</a> and <a href="https://www.bosch.de/en/">Bosch</a>. I obtained my Master's degree from Leibniz Hanover University and my Bachelor's degree from Hefei University of Technology.
+            Previously I was a senior ML scientist at <a href="https://picsart.com/">Picsart</a>. I received my Ph.D. in Computer Science from Leibniz Hanover University, advised by <a href="https://sites.google.com/site/michaelyingyang">Prof. Michael Yang</a> and <a href="https://www.tnt.uni-hannover.de/en/staff/rosenhahn/">Prof. Bodo Rosenhahn</a>.
           </p>
         </section>
 
         <section id="news">
           <h2>News</h2>
           <ul class="simple">
+            <li><span class="meta">Nov 2025:</span> We release <a href="https://tuna-ai.org/">TUNA</a>, A multimodal understanding and generation model!</li>
             <li><span class="meta">Jun 2025:</span> Our GenAI solution for Ads is highlighted at <a href="https://www.facebook.com/business/news/cannes-lions-2025-introducing-the-next-era-of-generative-ai-for-advertisers-and-agencies-personalization-at-scale">Cannes Lions 2025</a>.</li>
             <li><span class="meta">Mar 2025:</span> Paper on compositional image generation accepted to IJCV.</li>
             <li><span class="meta">Feb 2025:</span> Paper on virtual try-on accepted to CVPR.</li>
@@ -136,6 +143,30 @@
 
           <h3>Generative Models</h3>
           <ul class="pubs">
+            <li class="pub-item">
+              <img class="pub-thumb" src="images/pubs/tuna.gif"/>
+              <div>
+                <strong>TUNA: Taming Unified Visual Representations for Native Unified Multimodal Models</strong>
+                <div class="pub-meta">Zhiheng Liu, Weiming Ren, Haozhe Liu, Zijian Zhou, Shoufa Chen, Haonan Qiu, Xiaoke Huang, Zhaochong An, Fanny Yang, Aditya Patel, Viktar Atliha, Tony Ng, Xiao Han, Chuyan Zhu, Chenyang Zhang, Ding Liu, Juan-Manuel Perez-Rua, Sen He, Jürgen Schmidhuber, Wenhu Chen, Ping Luo, Wei Liu, Tao Xiang, Jonas Schult, Yuren Cong. <em>Preprint</em>, 2025.</div>
+                <div class="pub-links"><a href="https://tuna-ai.org/">Page</a> <a href="https://arxiv.org/abs/2512.02014">Paper</a> </div>
+              </div>
+            </li>
+            <li class="pub-item">
+              <img class="pub-thumb" src="images/pubs/mos.jpg"/>
+              <div>
+                <strong>Mixture of States: Routing Token-Level Dynamics for Multimodal Generation</strong>
+                <div class="pub-meta">Haozhe Liu, Ding Liu, Mingchen Zhuge, Zijian Zhou, Tian Xie, Sen He, Yukang Yang, Shuming Liu, Yuren Cong, Jiadong Guo, Hongyu Xu, Ke Xu, Kam-Woh Ng, Juan C. Pérez, Juan-ManuelPérez-Rúa, Tao Xiang, Wei Liu, Shikun Liu, Jürgen Schmidhuber. <em>Preprint</em>, 2025.</div>
+                <div class="pub-links"><a href="https://arxiv.org/pdf/2511.12207">Paper</a> </div>
+              </div>
+            </li>
+            <li class="pub-item">
+              <img class="pub-thumb" src="images/pubs/saber.gif"/>
+              <div>
+                <strong>Scaling Zero-Shot Reference-to-Video Generation</strong>
+                <div class="pub-meta">Zijian Zhou, Shikun Liu, Haozhe Liu, Haonan Qiu, Zhaochong An, Weiming Ren, Zhiheng Liu, Xiaoke Huang, Kam Woh Ng, Tian Xie, Xiao Han, Yuren Cong, Hang Li, Chuyan Zhu, Aditya Patel, Tao Xiang, Sen He. <em>Preprint</em>, 2025.</div>
+                <div class="pub-links"><a href="https://franciszzj.github.io/Saber/">Page</a> <a href="https://arxiv.org/pdf/2512.06905">Paper</a> </div>
+              </div>
+            </li>
             <li class="pub-item">
               <img class="pub-thumb" src="images/pubs/actig.jpg"/>
               <div>
